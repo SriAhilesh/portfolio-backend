@@ -53,10 +53,11 @@
                 <version>3.11.0</version>
                 <configuration>
                     <release>21</release>
-                    <!-- Optional: Only needed if using preview features -->
-                    <!-- <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs> -->
+                    <!-- Optional compiler arguments:
+                         Use preview features only if needed.
+                         To enable later, uncomment below and ensure preview features are used:
+                         
+                    -->
                 </configuration>
             </plugin>
 
