@@ -1,15 +1,9 @@
-# Use an official OpenJDK image
-FROM openjdk:21-jdk-slim
+# Use official Java 21 base image
+FROM openjdk:21
 
-# Set working directory inside container
-WORKDIR /app
-
-# Copy the built jar into the container
-COPY target/portfolio-backend-0.0.1-SNAPSHOT.jar app.jar
-
-# Expose the port your app runs on
-EXPOSE 8082
+# Copy the compiled jar to the container
+COPY target/*.jar app.jar
 
 # Run the jar file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
 
